@@ -21,6 +21,6 @@ class ProductQuery extends ActiveQuery
     public function products()
     {
         $sql = "select * from products";
-        return $this->createCommand($sql)->queryAll();
+        return Yii::$app->db->createCommand($sql)->queryAll();
     }
 }
